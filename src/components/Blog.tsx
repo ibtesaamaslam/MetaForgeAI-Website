@@ -267,34 +267,7 @@ const Blog = () => {
           })}
         </div>
 
-        {/* Newsletter CTA */}
-        <div className="mt-16 text-center animate-fade-up" style={{ animationDelay: '1.2s' }}>
-          <div className="glass rounded-3xl p-8 lg:p-12">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-aurora flex items-center justify-center mx-auto mb-6">
-              <Brain className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="font-display font-bold text-2xl mb-4 text-foreground">
-              Stay Ahead of the AI Revolution
-            </h3>
-            <p className="text-secondary mb-8 max-w-xl mx-auto">
-              Get exclusive AI insights, breakthrough research, and industry predictions delivered weekly. 
-              Join 10,000+ AI enthusiasts and business leaders.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-xl glass border border-white/20 text-foreground placeholder-secondary focus:outline-none focus:ring-2 focus:ring-primary/50"
-              />
-              <button className="btn-primary px-8 py-3 whitespace-nowrap">
-                Subscribe Now
-              </button>
-            </div>
-            <p className="text-xs text-secondary mt-4">
-              No spam. Unsubscribe anytime. Privacy policy applies.
-            </p>
-          </div>
-        </div>
+
       </div>
     </section>
   );
