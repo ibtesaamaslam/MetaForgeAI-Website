@@ -1,1 +1,182 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MetaForgeAI Design System - Premium Dark AI Studio Theme */
+
+@layer base {
+  :root {
+    /* Core Brand Colors - HSL Format */
+    --background: 240 10% 4%; /* #0A0A0C - Deep space black */
+    --foreground: 210 20% 90%; /* #E5E7EB - Clean white text */
+    
+    /* Card System */
+    --card: 240 10% 4%; /* Match background */
+    --card-foreground: 210 20% 90%;
+    --card-glass: 0 0% 100% / 0.03; /* Glass morphism overlay */
+    --card-border: 0 0% 100% / 0.08; /* Subtle glass border */
+    
+    /* Purple Brand Gradients */
+    --primary: 262 87% 56%; /* #7C3AED - Primary violet */
+    --primary-light: 266 85% 78%; /* #C084FC - Light violet */
+    --primary-foreground: 0 0% 100%; /* Pure white for contrast */
+    
+    /* Gradient Definitions */
+    --gradient-aurora: linear-gradient(135deg, hsl(262 87% 56%) 0%, hsl(266 85% 78%) 50%, hsl(280 100% 70%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(240 10% 4%) 0%, hsl(240 8% 6%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(262 87% 56% / 0.3) 0%, transparent 70%);
+    
+    /* Text Hierarchy */
+    --text-primary: 210 20% 90%; /* Main text */
+    --text-secondary: 220 9% 64%; /* #9CA3AF - Muted text */
+    --text-tertiary: 215 14% 34%; /* Darker muted */
+    
+    /* Interactive Elements */
+    --accent: 262 87% 56%; /* Interactive purple */
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 266 85% 78%; /* Lighter on hover */
+    
+    /* Semantic Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Surface Elements */
+    --border: 240 6% 14%; /* Subtle borders */
+    --input: 240 6% 14%;
+    --ring: 262 87% 56%; /* Focus rings */
+    
+    /* Glass Effects */
+    --glass-bg: 0 0% 100% / 0.03;
+    --glass-border: 0 0% 100% / 0.08;
+    --glass-shadow: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
+    
+    /* Animation Variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Spacing & Layout */
+    --radius: 1rem; /* Larger radius for premium feel */
+    --radius-lg: 1.5rem;
+    --container-padding: 2rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  /* Typography Scale */
+  .display-xl {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+  }
+  
+  .display-lg {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  
+  .display-md {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  /* Glass Morphism Components */
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  /* Aurora Gradient Background */
+  .aurora-bg {
+    background: var(--gradient-aurora);
+    filter: blur(80px);
+    opacity: 0.4;
+  }
+  
+  /* Premium Button Styles */
+  .btn-primary {
+    @apply px-8 py-4 rounded-xl font-semibold transition-all duration-300;
+    background: var(--gradient-aurora);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 30px hsl(262 87% 56% / 0.3);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px hsl(262 87% 56% / 0.4);
+  }
+  
+  .btn-secondary {
+    @apply px-8 py-4 rounded-xl font-semibold transition-all duration-300;
+    background: rgba(255, 255, 255, 0.03);
+    color: hsl(var(--foreground));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+  }
+  
+  /* Card Hover Effects */
+  .card-hover {
+    @apply transition-all duration-500 ease-out;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px hsl(0 0% 0% / 0.3), 0 0 40px hsl(262 87% 56% / 0.2);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Overline Text Style */
+  .overline {
+    @apply text-sm font-medium tracking-[0.2em] uppercase;
+    color: hsl(var(--text-secondary));
+    letter-spacing: 0.2em;
+  }
+  
+  /* Container */
+  .container-custom {
+    @apply mx-auto px-6 lg:px-8;
+    max-width: 1200px;
+  }
+}

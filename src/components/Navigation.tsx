@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 
-import metaforgeLogo from '@/assets/metaforge-logo.png';
-
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -40,11 +38,20 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src={metaforgeLogo} 
-              alt="MetaForgeAI Logo" 
-              className="w-10 h-10 rounded-xl"
-            />
+            <svg 
+              viewBox="0 0 100 100" 
+              className="w-10 h-10 text-primary"
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="6" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            >
+              <polygon points="50,4 90,27 90,73 50,96 10,73 10,27" />
+              <polygon points="50,18 58,23 58,33 50,38 42,33 42,23" />
+              <path d="M 38,28 C 24,28 22,38 22,48 L 22,52 L 26,56 L 26,66 L 36,76 L 36,84 L 50,91 L 64,84 L 64,76 L 74,66 L 74,56 L 78,52 L 78,48 C 78,38 76,28 62,28" />
+              <path d="M 34,46 L 50,56 L 66,46 L 66,58 L 56,68 L 56,80 L 50,84 L 44,80 L 44,68 L 34,58 Z" />
+            </svg>
             <span className="font-display font-bold text-2xl text-foreground">
               MetaForgeAI
             </span>

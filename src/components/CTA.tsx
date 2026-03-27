@@ -44,7 +44,7 @@ const CTA = () => {
           {/* Stats */}
           <div className="grid md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-white/10">
             {[
-              { number: "500+", label: "AI Solutions Deployed" },
+              { number: "15+", label: "AI Solutions Deployed" },
               { number: "98%", label: "Client Satisfaction Rate" },
               { number: "2.5x", label: "Average ROI Increase" }
             ].map((stat, index) => (

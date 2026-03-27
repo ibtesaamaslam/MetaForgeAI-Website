@@ -184,10 +184,10 @@ const FAQ = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                { number: "150+", label: "Projects" },
+                { number: "15+", label: "Projects" },
                 { number: "99.7%", label: "Uptime" },
                 { number: "24/7", label: "Support" },
-                { number: "15+", label: "Industries" }
+                { number: "6+", label: "Industries" }
               ].map((stat, index) => (
                 <div
                   key={stat.label}

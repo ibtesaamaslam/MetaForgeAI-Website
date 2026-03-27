@@ -11,9 +11,9 @@ const Services = () => {
   const services = [
     {
       icon: Globe,
-      title: "Smart Websites & Personalization",
-      description: "AI-driven personalization and automation that adapts to every visitor",
-      tags: ["Personalization", "Analytics", "UX Optimization"]
+      title: "Smart AI Web Apps & Personalization",
+      description: "AI-driven web applications, personalization, and automation that adapts to every visitor",
+      tags: ["AI Web Apps", "Personalization", "UX Optimization"]
     },
     {
       icon: MessageCircle,

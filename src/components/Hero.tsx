@@ -28,7 +28,7 @@ const Hero = () => {
       <div className="container-custom relative z-10 text-center pt-20">
         {/* Overline */}
         <div className="overline mb-8 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-          2025 / Next-Gen AI Studio
+          2026 / Next-Gen AI Studio
         </div>
 
         {/* Main Heading */}

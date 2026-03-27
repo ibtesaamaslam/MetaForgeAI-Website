@@ -180,9 +180,9 @@ const Portfolio = () => {
         {/* Stats Section */}
         <div className="mt-24 grid md:grid-cols-4 gap-8 text-center">
           {[
-            { number: "150+", label: "AI Projects Delivered", sublabel: "Across 15 Industries" },
+            { number: "15+", label: "AI Projects Delivered", sublabel: "Across 6 Industries" },
             { number: "99.7%", label: "Client Satisfaction", sublabel: "Proven Track Record" },
-            { number: "$50M+", label: "Revenue Generated", sublabel: "For Our Clients" },
+            { number: "PKR 500K+", label: "Revenue Generated", sublabel: "For Our Clients" },
             { number: "24/7", label: "AI Systems Running", sublabel: "Zero Downtime" }
           ].map((stat, index) => (
             <div
