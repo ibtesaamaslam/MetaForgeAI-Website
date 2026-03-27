@@ -95,19 +95,19 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
                 <a 
-                  href="mailto:you@domain.com" 
+                  href="mailto:info.metaforgeai@gmail.com" 
                   className="text-secondary hover:text-primary transition-colors duration-300"
                 >
-                  you@domain.com
+                  info.metaforgeai@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <span className="text-secondary">+1 (555) 123-4567</span>
+                <span className="text-secondary">+92 311-5616854</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span className="text-secondary">San Francisco, CA</span>
+                <span className="text-secondary">Islamabad, PK</span>
               </div>
             </div>
 
