@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Zap, Brain, Sparkles, TrendingUp } from 'lucide-react';
+import { ExternalLink, Zap, Brain, Sparkles, TrendingUp } from 'lucide-react';
 
 const Portfolio = () => {
   const projects = [
@@ -9,8 +9,7 @@ const Portfolio = () => {
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
       technologies: ["Machine Learning", "Computer Vision", "NLP", "Real-time Analytics"],
       results: ["+340% Revenue", "99.7% Uptime", "2.3s Response Time"],
-      link: "#",
-      github: "#"
+      link: "#"
     },
     {
       title: "VisionGuard Pro",
@@ -19,8 +18,7 @@ const Portfolio = () => {
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
       technologies: ["TensorFlow", "OpenCV", "Edge Computing", "IoT Integration"],
       results: ["99.97% Accuracy", "60% Cost Reduction", "24/7 Operation"],
-      link: "#",
-      github: "#"
+      link: "#"
     },
     {
       title: "ConversaBot Enterprise",
@@ -29,8 +27,7 @@ const Portfolio = () => {
       image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=400&fit=crop",
       technologies: ["GPT-4", "Voice Recognition", "Sentiment Analysis", "Multi-modal AI"],
       results: ["95% Satisfaction", "10K+ Daily Users", "40+ Languages"],
-      link: "#",
-      github: "#"
+      link: "#"
     },
     {
       title: "PredictIQ Analytics",
@@ -39,8 +36,7 @@ const Portfolio = () => {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       technologies: ["Time Series Analysis", "Deep Learning", "Financial APIs", "Real-time Data"],
       results: ["87% Accuracy", "$50M+ Managed", "0.2s Predictions"],
-      link: "#",
-      github: "#"
+      link: "#"
     },
     {
       title: "AutoFlow Pro",
@@ -49,8 +45,7 @@ const Portfolio = () => {
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
       technologies: ["RPA", "Document AI", "OCR", "Workflow Engine"],
       results: ["85% Time Saved", "100% Accuracy", "$1.2M Savings"],
-      link: "#",
-      github: "#"
+      link: "#"
     },
     {
       title: "ContentForge AI",
@@ -59,8 +54,7 @@ const Portfolio = () => {
       image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop",
       technologies: ["GPT-4", "Brand Analysis", "SEO AI", "Content Pipeline"],
       results: ["1000+ Daily Posts", "300% Engagement", "SEO Optimized"],
-      link: "#",
-      github: "#"
+      link: "#"
     }
   ];
 
@@ -111,23 +105,12 @@ const Portfolio = () => {
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute top-4 left-4">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-aurora flex items-center justify-center">
-                      <IconComponent className="w-5 h-5 text-white" />
-                    </div>
-                  </div>
                   <div className="absolute top-4 right-4 flex space-x-2">
                     <a 
                       href={project.link}
                       className="w-8 h-8 rounded-lg glass flex items-center justify-center text-white hover:bg-white/20 transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
-                    </a>
-                    <a 
-                      href={project.github}
-                      className="w-8 h-8 rounded-lg glass flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-                    >
-                      <Github className="w-4 h-4" />
                     </a>
                   </div>
                 </div>
