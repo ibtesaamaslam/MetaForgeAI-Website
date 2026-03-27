@@ -7,8 +7,25 @@ import FAQ from '@/components/FAQ';
 import Blog from '@/components/Blog';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Index = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />

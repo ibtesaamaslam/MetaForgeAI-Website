@@ -1,7 +1,15 @@
 import { ArrowRight, Calendar } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const CTA = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const scrollToContact = () => {
+    if (location.pathname !== '/') {
+      navigate('/#contact');
+      return;
+    }
     const element = document.querySelector('#contact');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });

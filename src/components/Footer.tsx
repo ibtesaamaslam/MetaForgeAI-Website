@@ -1,9 +1,16 @@
 import { Mail, Phone, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (href: string) => {
+    if (location.pathname !== '/') {
+      navigate('/' + href);
+      return;
+    }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -135,15 +142,15 @@ const Footer = () => {
             © {currentYear} MetaForgeAI. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-secondary hover:text-primary transition-colors text-sm">
+            <Link to="/privacy-policy" className="text-secondary hover:text-primary transition-colors text-sm">
               Privacy Policy
-            </a>
-            <a href="#" className="text-secondary hover:text-primary transition-colors text-sm">
+            </Link>
+            <Link to="/terms-of-service" className="text-secondary hover:text-primary transition-colors text-sm">
               Terms of Service
-            </a>
-            <a href="#" className="text-secondary hover:text-primary transition-colors text-sm">
-              Cookie Policy
-            </a>
+            </Link>
+            <Link to="/data-security" className="text-secondary hover:text-primary transition-colors text-sm">
+              Data Security
+            </Link>
           </div>
         </div>
       </div>
