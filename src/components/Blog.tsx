@@ -1,89 +1,25 @@
-import { Calendar, Clock, ArrowRight, TrendingUp, Brain, Zap, Users } from 'lucide-react';
+import { useState } from 'react';
+import { Calendar, Clock, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { blogPosts } from '../data/blogPosts';
 
 const Blog = () => {
-  const blogPosts = [
-    {
-      title: "Why Your Business Needs AI Automation in 2026: From Cost Center to Profit Driver",
-      excerpt: "Discover how intelligent process automation is no longer just a luxury, but a necessity for survival. Learn how our clients are turning operational bottlenecks into competitive advantages.",
-      author: "Dr. Sarah Chen",
-      role: "AI Strategy Director",
-      date: "Mar 25, 2026",
-      readTime: "8 min read",
-      category: "Industry Insights",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-      tags: ["Automation", "Business Strategy", "ROI"],
-      icon: TrendingUp,
-      featured: true
-    },
-    {
-      title: "The Future of E-commerce Intelligence: Hyper-Personalization at Scale",
-      excerpt: "Generic recommendations are dead. See how MetaForgeAI's predictive intelligence models are helping retailers anticipate customer needs before they even click 'Search'.",
-      author: "Marcus Rodriguez",
-      role: "E-commerce AI Lead",
-      date: "Mar 20, 2026",
-      readTime: "6 min read",
-      category: "Future Trends",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
-      tags: ["E-commerce", "Predictive AI", "Retail"],
-      icon: Zap
-    },
-    {
-      title: "Computer Vision Revolution: How AI Eyes Are Seeing the Unseen",
-      excerpt: "Explore breakthrough computer vision applications detecting microscopic defects with 99.97% accuracy and revolutionizing quality control in manufacturing.",
-      author: "Dr. Alex Kim",
-      role: "Computer Vision Lead",
-      date: "Mar 15, 2026",
-      readTime: "7 min read",
-      category: "Technology Deep-dive",
-      image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=600&h=400&fit=crop",
-      tags: ["Computer Vision", "Quality Control", "Innovation"],
-      icon: Brain
-    },
-    {
-      title: "Don't Get Left Behind: The Hidden Cost of Ignoring Generative AI",
-      excerpt: "While some companies wait and see, industry leaders are using Generative AI to 10x their content output and code generation. Here is why you need to act now.",
-      author: "Jennifer Park",
-      role: "Generative AI Specialist",
-      date: "Mar 10, 2026",
-      readTime: "5 min read",
-      category: "Strategic Advice",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      tags: ["Generative AI", "Competitive Edge", "Growth"],
-      icon: Users
-    },
-    {
-      title: "Conversational AI in 2027: Beyond Simple Chatbots",
-      excerpt: "The next generation of conversational AI doesn't just answer FAQs—it negotiates, empathizes, and closes sales. A look at the upcoming trends in NLP.",
-      author: "Dr. Michael Zhang",
-      role: "NLP Research Scientist",
-      date: "Mar 5, 2026",
-      readTime: "9 min read",
-      category: "Future Trends",
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=400&fit=crop",
-      tags: ["Conversational AI", "NLP", "Customer Experience"],
-      icon: Brain
-    },
-    {
-      title: "Predictive Analytics: Forecasting the Future with 87% Accuracy",
-      excerpt: "Behind the scenes of our financial prediction models that accurately forecasted market trends and generated $50M+ in client value.",
-      author: "Lisa Thompson",
-      role: "Data Science Director",
-      date: "Feb 28, 2026",
-      readTime: "6 min read",
-      category: "Case Study",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      tags: ["Predictive Analytics", "Financial AI", "Data Science"],
-      icon: TrendingUp
-    }
-  ];
+  const navigate = useNavigate();
+  // Dynamically generate categories and counts
+  const uniqueCategories = Array.from(new Set(blogPosts.map(post => post.category)));
+  const [activeCategory, setActiveCategory] = useState(uniqueCategories[0]);
 
-  const categories = [
-    { name: "All Posts", count: 24, active: true },
-    { name: "Industry Insights", count: 8 },
-    { name: "Future Trends", count: 6 },
-    { name: "Strategic Advice", count: 5 },
-    { name: "Case Studies", count: 5 }
-  ];
+  const categories = uniqueCategories.map(cat => ({
+    name: cat,
+    count: blogPosts.filter(post => post.category === cat).length,
+    active: activeCategory === cat
+  }));
+
+  const filteredPosts = blogPosts.filter(post => post.category === activeCategory);
+
+  // Find the first featured post in the filtered list, or just the first post if none are featured
+  const featuredPost = filteredPosts.find(post => post.featured) || filteredPosts[0];
+  const gridPosts = filteredPosts.filter(post => post !== featuredPost);
 
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -91,7 +27,7 @@ const Blog = () => {
       case "Future Trends": return "text-purple-400 bg-purple-400/10 border-purple-400/20";
       case "Strategic Advice": return "text-yellow-400 bg-yellow-400/10 border-yellow-400/20";
       case "Technology Deep-dive": return "text-cyan-400 bg-cyan-400/10 border-cyan-400/20";
-      case "Case Study": return "text-green-400 bg-green-400/10 border-green-400/20";
+      case "Case Studies": return "text-green-400 bg-green-400/10 border-green-400/20";
       default: return "text-primary bg-primary/10 border-primary/20";
     }
   };
@@ -114,9 +50,10 @@ const Blog = () => {
 
         {/* Categories Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <button
               key={category.name}
+              onClick={() => setActiveCategory(category.name)}
               className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                 category.active 
                   ? 'glass-strong text-primary border border-primary/30' 
@@ -129,14 +66,18 @@ const Blog = () => {
         </div>
 
         {/* Featured Post */}
-        {blogPosts[0] && (
+        {featuredPost && (
           <div className="mb-16 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-            <div className="glass rounded-3xl overflow-hidden card-hover group">
+            <div 
+              onClick={() => navigate(`/blog/${featuredPost.slug}`)}
+              className="glass rounded-3xl overflow-hidden card-hover group cursor-pointer"
+            >
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="relative overflow-hidden">
                   <img 
-                    src={blogPosts[0].image} 
-                    alt={blogPosts[0].title}
+                    src={featuredPost.image} 
+                    alt={featuredPost.title}
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent lg:hidden"></div>
@@ -151,32 +92,32 @@ const Blog = () => {
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="w-8 h-8 rounded-lg bg-gradient-aurora flex items-center justify-center">
                       {(() => {
-                        const IconComponent = blogPosts[0].icon;
+                        const IconComponent = featuredPost.icon;
                         return <IconComponent className="w-4 h-4 text-white" />;
                       })()}
                     </div>
-                    <span className={`px-3 py-1 text-xs font-medium rounded-full border ${getCategoryColor(blogPosts[0].category)}`}>
-                      {blogPosts[0].category}
+                    <span className={`px-3 py-1 text-xs font-medium rounded-full border ${getCategoryColor(featuredPost.category)}`}>
+                      {featuredPost.category}
                     </span>
                   </div>
                   
-                  <h3 className="font-display font-bold text-2xl lg:text-3xl mb-4 text-foreground leading-tight">
-                    {blogPosts[0].title}
+                  <h3 className="font-display font-bold text-2xl lg:text-3xl mb-4 text-foreground leading-tight group-hover:text-primary transition-colors">
+                    {featuredPost.title}
                   </h3>
                   
                   <p className="text-secondary mb-6 leading-relaxed">
-                    {blogPosts[0].excerpt}
+                    {featuredPost.excerpt}
                   </p>
                   
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4 text-sm text-secondary">
                       <div className="flex items-center space-x-2">
                         <Calendar className="w-4 h-4" />
-                        <span>{blogPosts[0].date}</span>
+                        <span>{featuredPost.date}</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <Clock className="w-4 h-4" />
-                        <span>{blogPosts[0].readTime}</span>
+                        <span>{featuredPost.readTime}</span>
                       </div>
                     </div>
                     
@@ -193,13 +134,14 @@ const Blog = () => {
 
         {/* Blog Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.slice(1).map((post, index) => {
+          {gridPosts.map((post, index) => {
             const IconComponent = post.icon;
             
             return (
               <article
                 key={post.title}
-                className="glass rounded-2xl overflow-hidden card-hover animate-fade-up group"
+                onClick={() => navigate(`/blog/${post.slug}`)}
+                className="glass rounded-2xl overflow-hidden card-hover animate-fade-up group cursor-pointer"
                 style={{ animationDelay: `${0.6 + index * 0.1}s` }}
               >
                 {/* Post Image */}
@@ -207,6 +149,7 @@ const Blog = () => {
                   <img 
                     src={post.image} 
                     alt={post.title}
+                    referrerPolicy="no-referrer"
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
@@ -233,13 +176,13 @@ const Blog = () => {
                     {post.title}
                   </h3>
                   
-                  <p className="text-secondary text-sm mb-4 leading-relaxed">
+                  <p className="text-secondary text-sm mb-4 leading-relaxed line-clamp-3">
                     {post.excerpt}
                   </p>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1 mb-4">
-                    {post.tags.map((tag) => (
+                    {post.tags.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
                         className="px-2 py-1 text-xs rounded-full glass text-tertiary"
@@ -250,7 +193,7 @@ const Blog = () => {
                   </div>
 
                   {/* Author & Date */}
-                  <div className="flex items-center justify-between pt-4 border-t border-white/10">
+                  <div className="flex items-center justify-between pt-4 border-t border-white/10 mt-auto">
                     <div>
                       <div className="font-medium text-foreground text-sm">{post.author}</div>
                       <div className="text-xs text-secondary">{post.role}</div>
@@ -266,6 +209,11 @@ const Blog = () => {
           })}
         </div>
 
+        {gridPosts.length === 0 && !featuredPost && (
+          <div className="text-center py-12 text-secondary">
+            No posts found in this category.
+          </div>
+        )}
 
       </div>
     </section>
