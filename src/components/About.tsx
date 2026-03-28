@@ -1,11 +1,11 @@
 import { ArrowRight, Sparkles, Target, Users } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const About = () => {
-  const scrollToContact = () => {
-    const element = document.querySelector('#contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const navigate = useNavigate();
+
+  const handleBookAppointment = () => {
+    navigate('/book');
   };
 
   return (
@@ -27,7 +27,7 @@ const About = () => {
               <span className="block text-primary">excellence.</span>
             </h2>
             <button 
-              onClick={scrollToContact}
+              onClick={handleBookAppointment}
               className="btn-primary inline-flex items-center gap-2"
             >
               Book an Appointment

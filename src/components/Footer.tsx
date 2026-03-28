@@ -127,7 +127,7 @@ const Footer = () => {
                 Book a free consultation and discover how AI can transform your business.
               </p>
               <button 
-                onClick={() => scrollToSection('#contact')}
+                onClick={() => navigate('/book')}
                 className="btn-primary w-full"
               >
                 Schedule Call

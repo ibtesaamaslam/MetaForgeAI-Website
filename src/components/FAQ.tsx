@@ -1,8 +1,14 @@
 import { useState } from 'react';
 import { Plus, Minus, Zap, Shield, Clock, Users } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const navigate = useNavigate();
+
+  const handleBookCall = () => {
+    navigate('/book');
+  };
 
   const faqs = [
     {
@@ -176,7 +182,10 @@ const FAQ = () => {
               <p className="text-secondary text-sm mb-4">
                 Our AI experts are here to help. Schedule a free consultation to discuss your specific needs.
               </p>
-              <button className="btn-primary w-full">
+              <button 
+                onClick={handleBookCall}
+                className="btn-primary w-full"
+              >
                 Schedule Free Consultation
               </button>
             </div>

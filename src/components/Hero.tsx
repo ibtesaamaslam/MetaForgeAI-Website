@@ -1,6 +1,9 @@
 import { ChevronDown } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   const scrollToAbout = () => {
     const element = document.querySelector('#about');
     if (element) {
@@ -8,11 +11,8 @@ const Hero = () => {
     }
   };
 
-  const scrollToContact = () => {
-    const element = document.querySelector('#contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleBookCall = () => {
+    navigate('/book');
   };
 
   return (
@@ -51,7 +51,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 animate-fade-up" 
              style={{ animationDelay: '0.8s' }}>
           <button 
-            onClick={scrollToContact}
+            onClick={handleBookCall}
             className="btn-primary"
           >
             Book a 15-min Call

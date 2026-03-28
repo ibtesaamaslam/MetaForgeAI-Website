@@ -87,7 +87,7 @@ const Navigation = () => {
           {/* CTA Button */}
           <div>
             <button 
-              onClick={() => scrollToSection('#contact')}
+              onClick={() => navigate('/book')}
               className="relative px-8 py-3 rounded-xl font-semibold text-sm bg-gradient-aurora text-white hover:shadow-glow-lg hover:scale-105 transition-all duration-300 border border-primary/30"
             >
               <span className="relative z-10">Book a 15-min Call</span>

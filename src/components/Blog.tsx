@@ -3,36 +3,36 @@ import { Calendar, Clock, ArrowRight, TrendingUp, Brain, Zap, Users } from 'luci
 const Blog = () => {
   const blogPosts = [
     {
-      title: "The Future of AI in Enterprise: 2024 Trends That Will Transform Business",
-      excerpt: "Discover the 5 revolutionary AI trends that are reshaping how enterprises operate, from autonomous decision-making to hyper-personalized customer experiences.",
+      title: "Why Your Business Needs AI Automation in 2026: From Cost Center to Profit Driver",
+      excerpt: "Discover how intelligent process automation is no longer just a luxury, but a necessity for survival. Learn how our clients are turning operational bottlenecks into competitive advantages.",
       author: "Dr. Sarah Chen",
-      role: "AI Research Director",
-      date: "Dec 15, 2024",
+      role: "AI Strategy Director",
+      date: "Mar 25, 2026",
       readTime: "8 min read",
       category: "Industry Insights",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-      tags: ["Enterprise AI", "Business Transformation", "Future Tech"],
+      tags: ["Automation", "Business Strategy", "ROI"],
       icon: TrendingUp,
       featured: true
     },
     {
-      title: "Breaking: GPT-5 Integration Increases Client ROI by 340%",
-      excerpt: "Case study reveals how our latest GPT-5 powered solutions delivered unprecedented returns for Fortune 500 clients in Q4 2024.",
+      title: "The Future of E-commerce Intelligence: Hyper-Personalization at Scale",
+      excerpt: "Generic recommendations are dead. See how MetaForgeAI's predictive intelligence models are helping retailers anticipate customer needs before they even click 'Search'.",
       author: "Marcus Rodriguez",
-      role: "Senior AI Engineer",
-      date: "Dec 12, 2024",
+      role: "E-commerce AI Lead",
+      date: "Mar 20, 2026",
       readTime: "6 min read",
-      category: "Case Study",
+      category: "Future Trends",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
-      tags: ["GPT-5", "ROI", "Case Study"],
+      tags: ["E-commerce", "Predictive AI", "Retail"],
       icon: Zap
     },
     {
       title: "Computer Vision Revolution: How AI Eyes Are Seeing the Unseen",
-      excerpt: "Explore breakthrough computer vision applications detecting microscopic defects with 99.97% accuracy and revolutionizing quality control.",
+      excerpt: "Explore breakthrough computer vision applications detecting microscopic defects with 99.97% accuracy and revolutionizing quality control in manufacturing.",
       author: "Dr. Alex Kim",
       role: "Computer Vision Lead",
-      date: "Dec 10, 2024",
+      date: "Mar 15, 2026",
       readTime: "7 min read",
       category: "Technology Deep-dive",
       image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=600&h=400&fit=crop",
@@ -40,25 +40,25 @@ const Blog = () => {
       icon: Brain
     },
     {
-      title: "AI Automation Success: From 40 Hours to 4 Minutes",
-      excerpt: "Real-world transformation story: How intelligent automation reduced invoice processing time by 99% while maintaining 100% accuracy.",
+      title: "Don't Get Left Behind: The Hidden Cost of Ignoring Generative AI",
+      excerpt: "While some companies wait and see, industry leaders are using Generative AI to 10x their content output and code generation. Here is why you need to act now.",
       author: "Jennifer Park",
-      role: "Automation Specialist",
-      date: "Dec 8, 2024",
+      role: "Generative AI Specialist",
+      date: "Mar 10, 2026",
       readTime: "5 min read",
-      category: "Success Story",
+      category: "Strategic Advice",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      tags: ["Automation", "Efficiency", "Success Story"],
+      tags: ["Generative AI", "Competitive Edge", "Growth"],
       icon: Users
     },
     {
-      title: "Conversational AI: Building Human-Like Interactions at Scale",
-      excerpt: "Technical deep-dive into creating AI assistants that handle 10,000+ daily interactions with 95% customer satisfaction rates.",
+      title: "Conversational AI in 2027: Beyond Simple Chatbots",
+      excerpt: "The next generation of conversational AI doesn't just answer FAQs—it negotiates, empathizes, and closes sales. A look at the upcoming trends in NLP.",
       author: "Dr. Michael Zhang",
       role: "NLP Research Scientist",
-      date: "Dec 5, 2024",
+      date: "Mar 5, 2026",
       readTime: "9 min read",
-      category: "Technical Guide",
+      category: "Future Trends",
       image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=400&fit=crop",
       tags: ["Conversational AI", "NLP", "Customer Experience"],
       icon: Brain
@@ -68,9 +68,9 @@ const Blog = () => {
       excerpt: "Behind the scenes of our financial prediction models that accurately forecasted market trends and generated $50M+ in client value.",
       author: "Lisa Thompson",
       role: "Data Science Director",
-      date: "Dec 2, 2024",
+      date: "Feb 28, 2026",
       readTime: "6 min read",
-      category: "Data Science",
+      category: "Case Study",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       tags: ["Predictive Analytics", "Financial AI", "Data Science"],
       icon: TrendingUp
@@ -80,19 +80,18 @@ const Blog = () => {
   const categories = [
     { name: "All Posts", count: 24, active: true },
     { name: "Industry Insights", count: 8 },
-    { name: "Case Studies", count: 6 },
-    { name: "Technical Guides", count: 5 },
-    { name: "Success Stories", count: 5 }
+    { name: "Future Trends", count: 6 },
+    { name: "Strategic Advice", count: 5 },
+    { name: "Case Studies", count: 5 }
   ];
 
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "Industry Insights": return "text-blue-400 bg-blue-400/10 border-blue-400/20";
+      case "Future Trends": return "text-purple-400 bg-purple-400/10 border-purple-400/20";
+      case "Strategic Advice": return "text-yellow-400 bg-yellow-400/10 border-yellow-400/20";
+      case "Technology Deep-dive": return "text-cyan-400 bg-cyan-400/10 border-cyan-400/20";
       case "Case Study": return "text-green-400 bg-green-400/10 border-green-400/20";
-      case "Technology Deep-dive": return "text-purple-400 bg-purple-400/10 border-purple-400/20";
-      case "Success Story": return "text-yellow-400 bg-yellow-400/10 border-yellow-400/20";
-      case "Technical Guide": return "text-cyan-400 bg-cyan-400/10 border-cyan-400/20";
-      case "Data Science": return "text-pink-400 bg-pink-400/10 border-pink-400/20";
       default: return "text-primary bg-primary/10 border-primary/20";
     }
   };

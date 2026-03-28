@@ -1,19 +1,11 @@
 import { ArrowRight, Calendar } from 'lucide-react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const CTA = () => {
   const navigate = useNavigate();
-  const location = useLocation();
 
-  const scrollToContact = () => {
-    if (location.pathname !== '/') {
-      navigate('/#contact');
-      return;
-    }
-    const element = document.querySelector('#contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleBookCall = () => {
+    navigate('/book');
   };
 
   return (
@@ -36,7 +28,7 @@ const CTA = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <button 
-              onClick={scrollToContact}
+              onClick={handleBookCall}
               className="btn-primary inline-flex items-center gap-3 text-lg px-10 py-5"
             >
               <Calendar className="w-6 h-6" />
