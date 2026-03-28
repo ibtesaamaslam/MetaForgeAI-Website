@@ -81,6 +81,10 @@ const BlogPost = () => {
                 src={post.image} 
                 alt={post.title}
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80";
+                }}
                 className="w-full h-full object-cover"
               />
             </div>

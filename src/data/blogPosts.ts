@@ -53,7 +53,7 @@ export const blogPosts = [
     date: "Mar 25, 2026",
     readTime: "8 min read",
     category: "Industry Insights",
-    image: "https://picsum.photos/seed/automation/800/600",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&q=80",
     tags: ["Automation", "Business Strategy", "ROI"],
     icon: TrendingUp,
     featured: true,
@@ -68,7 +68,7 @@ export const blogPosts = [
     date: "Mar 18, 2026",
     readTime: "10 min read",
     category: "Industry Insights",
-    image: "https://picsum.photos/seed/enterprise/800/600",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
     tags: ["Enterprise AI", "Market Research", "Trends"],
     icon: BarChart,
     content: generateContent("The State of Enterprise AI: 2026 Industry Report")
@@ -82,7 +82,7 @@ export const blogPosts = [
     date: "Mar 12, 2026",
     readTime: "7 min read",
     category: "Industry Insights",
-    image: "https://picsum.photos/seed/supplychain/800/600",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8ed7c663c0?auto=format&fit=crop&w=800&q=80",
     tags: ["Supply Chain", "Logistics", "Predictive AI"],
     icon: Globe,
     content: generateContent("How AI is Reshaping the Global Supply Chain")
@@ -96,7 +96,7 @@ export const blogPosts = [
     date: "Mar 05, 2026",
     readTime: "9 min read",
     category: "Industry Insights",
-    image: "https://picsum.photos/seed/ethics/800/600",
+    image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=800&h=600&fit=crop&q=80",
     tags: ["Ethics", "Compliance", "AI Governance"],
     icon: Shield,
     content: generateContent("The Ethics of AI: Navigating the New Frontier of Business")
@@ -112,7 +112,7 @@ export const blogPosts = [
     date: "Mar 20, 2026",
     readTime: "6 min read",
     category: "Future Trends",
-    image: "https://picsum.photos/seed/ecommerce/800/600",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80",
     tags: ["E-commerce", "Predictive AI", "Retail"],
     icon: Zap,
     content: generateContent("The Future of E-commerce Intelligence: Hyper-Personalization at Scale")
@@ -126,7 +126,7 @@ export const blogPosts = [
     date: "Feb 28, 2026",
     readTime: "9 min read",
     category: "Future Trends",
-    image: "https://picsum.photos/seed/chatbots/800/600",
+    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=600&fit=crop&q=80",
     tags: ["Conversational AI", "NLP", "Customer Experience"],
     icon: Brain,
     content: generateContent("Conversational AI in 2027: Beyond Simple Chatbots")
@@ -140,7 +140,7 @@ export const blogPosts = [
     date: "Feb 15, 2026",
     readTime: "11 min read",
     category: "Future Trends",
-    image: "https://picsum.photos/seed/quantum/800/600",
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=600&fit=crop&q=80",
     tags: ["Quantum Computing", "Future Tech", "Research"],
     icon: Cpu,
     content: generateContent("Quantum Computing and AI: The Next Great Leap")
@@ -154,7 +154,7 @@ export const blogPosts = [
     date: "Feb 02, 2026",
     readTime: "8 min read",
     category: "Future Trends",
-    image: "https://picsum.photos/seed/agents/800/600",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop&q=80",
     tags: ["Autonomous Agents", "Future of Work", "AGI"],
     icon: Network,
     content: generateContent("Autonomous Agents: The Digital Workforce of 2030")
@@ -170,7 +170,7 @@ export const blogPosts = [
     date: "Mar 10, 2026",
     readTime: "5 min read",
     category: "Strategic Advice",
-    image: "https://picsum.photos/seed/generative/800/600",
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop&q=80",
     tags: ["Generative AI", "Competitive Edge", "Growth"],
     icon: Lightbulb,
     content: generateContent("Don't Get Left Behind: The Hidden Cost of Ignoring Generative AI")
@@ -184,7 +184,7 @@ export const blogPosts = [
     date: "Feb 22, 2026",
     readTime: "7 min read",
     category: "Strategic Advice",
-    image: "https://picsum.photos/seed/culture/800/600",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80",
     tags: ["Culture", "Change Management", "Leadership"],
     icon: Users,
     content: generateContent("Building an AI-Ready Culture in Your Organization")
@@ -198,7 +198,7 @@ export const blogPosts = [
     date: "Feb 10, 2026",
     readTime: "8 min read",
     category: "Strategic Advice",
-    image: "https://picsum.photos/seed/roi/800/600",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
     tags: ["ROI", "Finance", "Metrics"],
     icon: TrendingUp,
     content: generateContent("How to Accurately Measure ROI on Your AI Investments")
@@ -212,7 +212,7 @@ export const blogPosts = [
     date: "Jan 28, 2026",
     readTime: "6 min read",
     category: "Strategic Advice",
-    image: "https://picsum.photos/seed/partner/800/600",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80",
     tags: ["Partnerships", "Vendor Selection", "Strategy"],
     icon: Shield,
     content: generateContent("Choosing the Right AI Partner for Your Enterprise")
@@ -228,7 +228,7 @@ export const blogPosts = [
     date: "Feb 28, 2026",
     readTime: "6 min read",
     category: "Case Studies",
-    image: "https://picsum.photos/seed/analytics/800/600",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop&q=80",
     tags: ["Predictive Analytics", "Financial AI", "Data Science"],
     icon: TrendingUp,
     content: generateContent("Predictive Analytics: Forecasting the Future with 87% Accuracy")
@@ -242,7 +242,7 @@ export const blogPosts = [
     date: "Feb 18, 2026",
     readTime: "7 min read",
     category: "Case Studies",
-    image: "https://picsum.photos/seed/logistics/800/600",
+    image: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&h=600&fit=crop&q=80",
     tags: ["Logistics", "Cost Reduction", "Routing"],
     icon: Globe,
     content: generateContent("Global Logistics Firm Cuts Operational Costs by 40% with MetaForgeAI")
@@ -256,7 +256,7 @@ export const blogPosts = [
     date: "Jan 30, 2026",
     readTime: "8 min read",
     category: "Case Studies",
-    image: "https://picsum.photos/seed/healthcare/800/600",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop&q=80",
     tags: ["Healthcare", "Predictive AI", "Machine Learning"],
     icon: Brain,
     content: generateContent("Healthcare Provider Improves Patient Outcomes via Predictive AI")
@@ -270,7 +270,7 @@ export const blogPosts = [
     date: "Jan 15, 2026",
     readTime: "6 min read",
     category: "Case Studies",
-    image: "https://picsum.photos/seed/retail/800/600",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop&q=80",
     tags: ["Retail", "E-commerce", "Personalization"],
     icon: Zap,
     content: generateContent("Retail Giant Achieves 300% ROI with Hyper-Personalization")
@@ -286,7 +286,7 @@ export const blogPosts = [
     date: "Mar 15, 2026",
     readTime: "7 min read",
     category: "Technology Deep-dive",
-    image: "https://picsum.photos/seed/vision/800/600",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop&q=80",
     tags: ["Computer Vision", "Quality Control", "Innovation"],
     icon: Brain,
     content: generateContent("Computer Vision Revolution: How AI Eyes Are Seeing the Unseen")
@@ -300,7 +300,7 @@ export const blogPosts = [
     date: "Mar 01, 2026",
     readTime: "12 min read",
     category: "Technology Deep-dive",
-    image: "https://picsum.photos/seed/llm/800/600",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop&q=80",
     tags: ["LLMs", "NLP", "Architecture"],
     icon: Network,
     content: generateContent("Demystifying Large Language Models (LLMs) for Enterprise")
@@ -314,7 +314,7 @@ export const blogPosts = [
     date: "Feb 12, 2026",
     readTime: "8 min read",
     category: "Technology Deep-dive",
-    image: "https://picsum.photos/seed/edge/800/600",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
     tags: ["Edge Computing", "IoT", "Hardware"],
     icon: Cpu,
     content: generateContent("Edge AI: Bringing Intelligence Directly to the Device")
@@ -328,7 +328,7 @@ export const blogPosts = [
     date: "Jan 20, 2026",
     readTime: "9 min read",
     category: "Technology Deep-dive",
-    image: "https://picsum.photos/seed/federated/800/600",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&q=80",
     tags: ["Federated Learning", "Privacy", "Security"],
     icon: Shield,
     content: generateContent("Federated Learning: Privacy-Preserving AI Training")
