@@ -24,7 +24,7 @@ const Portfolio = () => {
       title: "Reclaim Your Heart",
       category: "Spiritual Wellness",
       description: "Designed a spiritually focused application aimed at self-reflection and emotional well-being. Combines Islamic teachings with guided content to help users reconnect with purpose and inner peace.",
-      image: "https://images.unsplash.com/photo-1609599006353-e629aaab315d?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=600&q=80",
       technologies: ["React Native", "Firebase", "Audio Streaming", "Daily Reminders"],
       results: ["10k+ Active Users", "4.9/5 App Rating", "Personalized Content"],
       link: "#"
@@ -42,7 +42,7 @@ const Portfolio = () => {
       title: "HireMind",
       category: "HR & Recruitment AI",
       description: "Built an AI-powered recruitment assistant that screens candidates, analyzes resumes, and generates interview insights. Enhances hiring efficiency through intelligent automation and data-driven decision-making.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80",
       technologies: ["OpenAI API", "Python", "React", "NLP"],
       results: ["70% Faster Hiring", "95% Candidate Match", "Unbiased Screening"],
       link: "#"
@@ -51,7 +51,7 @@ const Portfolio = () => {
       title: "EchoVerse",
       category: "EdTech & AI",
       description: "Developed an AI-based language learning assistant for children (ages 6–12) with interactive and gamified modules. Integrates speech recognition and NLP to create an engaging and adaptive learning experience.",
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80",
       technologies: ["Speech Recognition", "NLP", "React Native", "Gamification"],
       results: ["50k+ Daily Users", "99% Engagement", "Adaptive Learning"],
       link: "#"
@@ -102,6 +102,11 @@ const Portfolio = () => {
                   <img 
                     src={project.image} 
                     alt={project.title}
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80";
+                    }}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
