@@ -3,57 +3,57 @@ import { ExternalLink, Zap, Brain, Sparkles, TrendingUp } from 'lucide-react';
 const Portfolio = () => {
   const projects = [
     {
-      title: "NeuralCommerce AI",
-      category: "E-commerce Intelligence",
-      description: "Revolutionary AI-powered platform that increased client revenue by 340% through predictive customer behavior analysis and dynamic pricing optimization.",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
-      technologies: ["Machine Learning", "Computer Vision", "NLP", "Real-time Analytics"],
-      results: ["+340% Revenue", "99.7% Uptime", "2.3s Response Time"],
-      link: "#"
-    },
-    {
-      title: "VisionGuard Pro",
-      category: "Computer Vision",
-      description: "Advanced quality control system using deep learning to detect microscopic defects with 99.97% accuracy, saving manufacturers $2M+ annually.",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
-      technologies: ["TensorFlow", "OpenCV", "Edge Computing", "IoT Integration"],
-      results: ["99.97% Accuracy", "60% Cost Reduction", "24/7 Operation"],
-      link: "#"
-    },
-    {
-      title: "ConversaBot Enterprise",
-      category: "Conversational AI",
-      description: "Multi-lingual AI assistant handling 10,000+ customer interactions daily with human-like understanding and 95% customer satisfaction.",
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=400&fit=crop",
-      technologies: ["GPT-4", "Voice Recognition", "Sentiment Analysis", "Multi-modal AI"],
-      results: ["95% Satisfaction", "10K+ Daily Users", "40+ Languages"],
-      link: "#"
-    },
-    {
-      title: "PredictIQ Analytics",
-      category: "Predictive Intelligence",
-      description: "Financial forecasting platform that predicted market trends with 87% accuracy, helping clients make data-driven investment decisions.",
+      title: "Customer Churn Prediction Model",
+      category: "Predictive Analytics",
+      description: "Built an end-to-end machine learning pipeline to predict customer churn using structured data. Applied feature engineering and classification models to identify at-risk users, enabling proactive retention strategies.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      technologies: ["Time Series Analysis", "Deep Learning", "Financial APIs", "Real-time Data"],
-      results: ["87% Accuracy", "$50M+ Managed", "0.2s Predictions"],
+      technologies: ["Python", "Scikit-Learn", "XGBoost", "Pandas"],
+      results: ["92% Accuracy", "30% Churn Reduction", "Real-time Alerts"],
       link: "#"
     },
     {
-      title: "AutoFlow Pro",
-      category: "Process Automation",
-      description: "Intelligent workflow automation that reduced manual processing time by 85% while maintaining 100% accuracy in document handling.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
-      technologies: ["RPA", "Document AI", "OCR", "Workflow Engine"],
-      results: ["85% Time Saved", "100% Accuracy", "$1.2M Savings"],
+      title: "Gym Management System",
+      category: "Business Automation",
+      description: "Developed a full-stack web platform for managing memberships, attendance, and payments with role-based dashboards. Streamlined gym operations through automation and real-time analytics.",
+      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop",
+      technologies: ["React", "Node.js", "PostgreSQL", "Stripe API"],
+      results: ["50% Less Admin Work", "+20% Member Retention", "Automated Billing"],
       link: "#"
     },
     {
-      title: "ContentForge AI",
-      category: "Generative AI",
-      description: "Brand-consistent content generation platform producing 1000+ pieces daily while maintaining authentic brand voice and SEO optimization.",
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop",
-      technologies: ["GPT-4", "Brand Analysis", "SEO AI", "Content Pipeline"],
-      results: ["1000+ Daily Posts", "300% Engagement", "SEO Optimized"],
+      title: "Reclaim Your Heart",
+      category: "Spiritual Wellness",
+      description: "Designed a spiritually focused application aimed at self-reflection and emotional well-being. Combines Islamic teachings with guided content to help users reconnect with purpose and inner peace.",
+      image: "https://images.unsplash.com/photo-1609599006353-e629aaab315d?w=600&h=400&fit=crop",
+      technologies: ["React Native", "Firebase", "Audio Streaming", "Daily Reminders"],
+      results: ["10k+ Active Users", "4.9/5 App Rating", "Personalized Content"],
+      link: "#"
+    },
+    {
+      title: "MediNexus SaaS",
+      category: "Healthcare Tech",
+      description: "Created a healthcare SaaS platform for managing patient records, appointments, and communication workflows. Focused on scalability, security, and seamless data handling for clinics and medical professionals.",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
+      technologies: ["Next.js", "AWS", "GraphQL", "HIPAA Compliant"],
+      results: ["500+ Clinics", "1M+ Records Managed", "Zero Data Breaches"],
+      link: "#"
+    },
+    {
+      title: "HireMind",
+      category: "HR & Recruitment AI",
+      description: "Built an AI-powered recruitment assistant that screens candidates, analyzes resumes, and generates interview insights. Enhances hiring efficiency through intelligent automation and data-driven decision-making.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop",
+      technologies: ["OpenAI API", "Python", "React", "NLP"],
+      results: ["70% Faster Hiring", "95% Candidate Match", "Unbiased Screening"],
+      link: "#"
+    },
+    {
+      title: "EchoVerse",
+      category: "EdTech & AI",
+      description: "Developed an AI-based language learning assistant for children (ages 6–12) with interactive and gamified modules. Integrates speech recognition and NLP to create an engaging and adaptive learning experience.",
+      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop",
+      technologies: ["Speech Recognition", "NLP", "React Native", "Gamification"],
+      results: ["50k+ Daily Users", "99% Engagement", "Adaptive Learning"],
       link: "#"
     }
   ];
