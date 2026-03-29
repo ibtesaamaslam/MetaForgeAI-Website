@@ -1,11 +1,10 @@
 import { ArrowRight, Calendar } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 
 const CTA = () => {
-  const navigate = useNavigate();
-
   const handleBookCall = () => {
-    navigate('/book');
+    const subject = encodeURIComponent("Consultation Request");
+    const body = encodeURIComponent("Name: \n\nMessage: ");
+    window.open(`mailto:info.metaforgeai@gmail.com?subject=${subject}&body=${body}`, '_top');
   };
 
   return (

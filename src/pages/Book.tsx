@@ -1,13 +1,30 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ArrowLeft, Calendar, Clock, Video, Mail, User, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 
 const Book = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent("Consultation Request");
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+    window.open(`mailto:info.metaforgeai@gmail.com?subject=${subject}&body=${body}`, '_top');
+    
+    toast.success("Your request has been sent successfully!");
+    setFormData({ name: "", email: "", message: "" });
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
@@ -67,7 +84,7 @@ const Book = () => {
                 <div className="relative z-10">
                   <h2 className="text-2xl font-display font-semibold mb-8 text-foreground">Your Details</h2>
                   
-                  <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                  <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-sm font-medium text-secondary flex items-center gap-2">
@@ -75,6 +92,8 @@ const Book = () => {
                         </label>
                         <input 
                           type="text" 
+                          value={formData.name}
+                          onChange={(e) => setFormData({...formData, name: e.target.value})}
                           placeholder="John Doe" 
                           className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-primary/50 transition-colors"
                         />
@@ -85,6 +104,8 @@ const Book = () => {
                         </label>
                         <input 
                           type="email" 
+                          value={formData.email}
+                          onChange={(e) => setFormData({...formData, email: e.target.value})}
                           placeholder="john@example.com" 
                           className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-primary/50 transition-colors"
                         />
@@ -97,14 +118,19 @@ const Book = () => {
                       </label>
                       <textarea 
                         rows={5}
+                        value={formData.message}
+                        onChange={(e) => setFormData({...formData, message: e.target.value})}
                         placeholder="Tell us a bit about your project or business needs..." 
                         className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-primary/50 transition-colors resize-none"
                       ></textarea>
                     </div>
 
-                    <button className="btn-primary w-full py-4 text-lg flex items-center justify-center gap-2 mt-4">
+                    <button 
+                      type="submit"
+                      className="btn-primary w-full py-4 text-lg flex items-center justify-center gap-2 mt-4"
+                    >
                       <Calendar className="w-5 h-5" />
-                      Request Consultation
+                      Book a 15-min Call
                     </button>
                     
                     <p className="text-xs text-secondary text-center mt-6">
