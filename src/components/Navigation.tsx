@@ -66,8 +66,8 @@ const Navigation = () => {
           </div>
 
           {/* Navigation & Socials */}
-          <div className="flex items-center gap-6">
-            <div className="hidden lg:flex items-center space-x-2 mr-4">
+          <div className="flex items-center gap-4">
+            <div className="hidden lg:flex items-center space-x-1.5 mr-2">
               <a 
                 href="https://x.com/metaforgeai" 
                 target="_blank"
@@ -110,12 +110,12 @@ const Navigation = () => {
               </a>
             </div>
 
-            <div className="hidden lg:flex items-center space-x-3">
+            <div className="hidden lg:flex items-center space-x-1.5">
               {navItems.map((item, index) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className={`relative px-6 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 border border-transparent hover:border-primary/30 ${
+                  className={`relative px-4 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 border border-transparent hover:border-primary/30 ${
                     index === 0 
                       ? 'glass-strong text-foreground hover:bg-primary/10 hover:text-primary' 
                       : 'glass text-secondary hover:text-foreground hover:bg-white/5'
@@ -131,10 +131,10 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <div>
+          <div className="flex-shrink-0">
             <button 
               onClick={() => navigate('/book')}
-              className="relative px-8 py-3 rounded-xl font-semibold text-sm bg-gradient-aurora text-white hover:shadow-glow-lg hover:scale-105 transition-all duration-300 border border-primary/30"
+              className="relative px-6 py-3 rounded-xl font-semibold text-sm bg-gradient-aurora text-white hover:shadow-glow-lg hover:scale-105 transition-all duration-300 border border-primary/30"
             >
               <span className="relative z-10">Book a 15-min Call</span>
               <div className="absolute inset-0 bg-gradient-aurora opacity-80 rounded-xl"></div>
