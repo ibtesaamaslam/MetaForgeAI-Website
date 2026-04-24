@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -28,6 +29,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="MetaForgeAI | Enterprise AI Solutions & Automation"
+        description="Transform your enterprise with MetaForgeAI. We specialize in custom AI solution development, intelligent automation, and predictive analytics."
+        canonical="https://metaforgeai.com"
+      />
       <Navigation />
       <Hero />
       <About />

@@ -1,4 +1,5 @@
 import Navigation from "../components/Navigation";
+import SEO from "../components/SEO";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
 import { ArrowLeft, Lock } from "lucide-react";
@@ -11,6 +12,11 @@ const DataSecurity = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      <SEO 
+        title="Data Security"
+        description="Learn about MetaForgeAI's enterprise-grade data security measures and how we protect your proprietary business information."
+        canonical="https://metaforgeai.com/data-security"
+      />
       {/* Background Effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-50 pointer-events-none"></div>
       

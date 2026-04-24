@@ -77,6 +77,7 @@ const Blog = () => {
                   <img 
                     src={featuredPost.image} 
                     alt={featuredPost.title}
+                    loading="lazy"
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
@@ -153,6 +154,7 @@ const Blog = () => {
                   <img 
                     src={post.image} 
                     alt={post.title}
+                    loading="lazy"
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;

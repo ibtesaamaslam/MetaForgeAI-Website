@@ -121,5 +121,8 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+	plugins: [
+		require("tailwindcss-animate"), // eslint-disable-line @typescript-eslint/no-require-imports
+		require("@tailwindcss/typography"), // eslint-disable-line @typescript-eslint/no-require-imports
+	],
 } satisfies Config;

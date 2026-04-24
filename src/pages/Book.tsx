@@ -1,4 +1,5 @@
 import Navigation from "../components/Navigation";
+import SEO from "../components/SEO";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import { ArrowLeft, Calendar, Clock, Video, Mail, User, MessageSquare } from "lucide-react";
@@ -27,15 +28,20 @@ const Book = () => {
     const subject = encodeURIComponent("Consultation Request");
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
     
-    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=info.metaforgeai@gmail.com&su=${subject}&body=${body}`;
-    window.open(gmailLink, '_blank');
+    // Use mailto: for universal support, _top to bypass potential framing issues
+    window.open(`mailto:info.metaforgeai@gmail.com?subject=${subject}&body=${body}`, '_top');
     
-    toast.success("Opening Gmail to send your request...");
+    toast.success("Request prepared in your mail client!");
     setFormData({ name: "", email: "", message: "" });
   };
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      <SEO 
+        title="Schedule a Consultation"
+        description="Book a free 15-minute discovery call to discuss how MetaForgeAI can transform your business with intelligent solutions."
+        canonical="https://metaforgeai.com/book"
+      />
       {/* Background Effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-50 pointer-events-none"></div>
       

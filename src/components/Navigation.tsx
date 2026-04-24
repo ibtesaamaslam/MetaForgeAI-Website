@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { Twitter, Instagram } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,24 +65,69 @@ const Navigation = () => {
             </span>
           </div>
 
-          {/* Navigation */}
-          <div className="flex items-center space-x-3">
-            {navItems.map((item, index) => (
-              <button
-                key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                className={`relative px-6 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 border border-transparent hover:border-primary/30 ${
-                  index === 0 
-                    ? 'glass-strong text-foreground hover:bg-primary/10 hover:text-primary' 
-                    : 'glass text-secondary hover:text-foreground hover:bg-white/5'
-                } backdrop-blur-md hover:shadow-glow hover:scale-105`}
+          {/* Navigation & Socials */}
+          <div className="flex items-center gap-6">
+            <div className="hidden lg:flex items-center space-x-2 mr-4">
+              <a 
+                href="https://x.com/metaforgeai" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg glass hover:glass-strong flex items-center justify-center transition-all duration-300 hover:scale-110 text-secondary hover:text-primary"
+                aria-label="X (Twitter)"
               >
-                <span className="relative z-10">{item.label}</span>
-                {index === 0 && (
-                  <div className="absolute inset-0 bg-gradient-aurora opacity-10 rounded-xl"></div>
-                )}
-              </button>
-            ))}
+                <Twitter className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://www.instagram.com/meta_forge.ai?igsh=MWh5ZGF5NXJsdTc3eA==" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg glass hover:glass-strong flex items-center justify-center transition-all duration-300 hover:scale-110 text-secondary hover:text-primary"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://www.reddit.com/user/METAFORGEAI/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg glass hover:glass-strong flex items-center justify-center transition-all duration-300 hover:scale-110 text-secondary hover:text-primary"
+                aria-label="Reddit"
+              >
+                <svg 
+                  viewBox="0 0 24 24" 
+                  className="w-4 h-4 fill-none stroke-current"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M17 11.5a1.5 1.5 0 0 1-1.5 1.5c-.3 0-.6-.1-.8-.2-.9.7-2.1 1.2-3.4 1.2s-2.5-.5-3.4-1.2c-.2.1-.5.2-.8.2a1.5 1.5 0 0 1-1.5-1.5c0-.6.4-1.1.9-1.4-.1-.3-.1-.6-.1-.9 0-2 2.1-3.6 4.6-3.6 2.5 0 4.6 1.6 4.6 3.6 0 .3 0 .6-.1.9.5.3.9.8.9 1.4z" />
+                  <circle cx="9.5" cy="11.5" r=".5" />
+                  <circle cx="14.5" cy="11.5" r=".5" />
+                  <path d="M15 15.5c-.7 1-1.8 1.5-3 1.5s-2.3-.5-3-1.5" />
+                  <path d="M12 7c1.3 0 2.5.4 3.4 1.1l1.1-1.1" />
+                </svg>
+              </a>
+            </div>
+
+            <div className="hidden lg:flex items-center space-x-3">
+              {navItems.map((item, index) => (
+                <button
+                  key={item.label}
+                  onClick={() => scrollToSection(item.href)}
+                  className={`relative px-6 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 border border-transparent hover:border-primary/30 ${
+                    index === 0 
+                      ? 'glass-strong text-foreground hover:bg-primary/10 hover:text-primary' 
+                      : 'glass text-secondary hover:text-foreground hover:bg-white/5'
+                  } backdrop-blur-md hover:shadow-glow hover:scale-105`}
+                >
+                  <span className="relative z-10">{item.label}</span>
+                  {index === 0 && (
+                    <div className="absolute inset-0 bg-gradient-aurora opacity-10 rounded-xl"></div>
+                  )}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* CTA Button */}

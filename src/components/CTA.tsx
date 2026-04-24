@@ -21,8 +21,8 @@ const CTA = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a 
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=info.metaforgeai@gmail.com&su=Consultation%20Request&body=Name%3A%20%0A%0AMessage%3A%20"
-              target="_blank"
+              href="mailto:info.metaforgeai@gmail.com?subject=Consultation%20Request&body=Name%3A%20%0A%0AMessage%3A%20"
+              target="_top"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center gap-3 text-lg px-10 py-5"
             >

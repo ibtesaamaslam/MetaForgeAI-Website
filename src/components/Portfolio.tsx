@@ -102,6 +102,7 @@ const Portfolio = () => {
                   <img 
                     src={project.image} 
                     alt={project.title}
+                    loading="lazy"
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;

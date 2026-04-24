@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import SEO from '../components/SEO';
 import { blogPosts } from '../data/blogPosts';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -30,6 +31,30 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background selection:bg-primary/30 selection:text-primary-light">
+      <SEO 
+        title={post.title}
+        description={post.excerpt}
+        canonical={`https://metaforgeai.com/blog/${post.slug}`}
+        ogType="article"
+        ogImage={post.image}
+      />
+      
+      {/* Blog Article Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "image": post.image,
+          "datePublished": post.date,
+          "author": [{
+            "@type": "Person",
+            "name": post.author
+          }],
+          "description": post.excerpt
+        })}
+      </script>
+
       <Navigation />
       
       <main className="pt-32 pb-24 relative">

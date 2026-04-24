@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Twitter, Instagram } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Footer = () => {
@@ -48,22 +48,44 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://x.com/metaforgeai" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg glass hover:glass-strong flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="X (Twitter)"
               >
                 <Twitter className="w-5 h-5 text-primary" />
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/meta_forge.ai?igsh=MWh5ZGF5NXJsdTc3eA==" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg glass hover:glass-strong flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Instagram"
               >
-                <Linkedin className="w-5 h-5 text-primary" />
+                <Instagram className="w-5 h-5 text-primary" />
               </a>
               <a 
-                href="#" 
+                href="https://www.reddit.com/user/METAFORGEAI/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg glass hover:glass-strong flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Reddit"
               >
-                <Github className="w-5 h-5 text-primary" />
+                <svg 
+                  viewBox="0 0 24 24" 
+                  className="w-5 h-5 text-primary fill-none stroke-current"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M17 11.5a1.5 1.5 0 0 1-1.5 1.5c-.3 0-.6-.1-.8-.2-.9.7-2.1 1.2-3.4 1.2s-2.5-.5-3.4-1.2c-.2.1-.5.2-.8.2a1.5 1.5 0 0 1-1.5-1.5c0-.6.4-1.1.9-1.4-.1-.3-.1-.6-.1-.9 0-2 2.1-3.6 4.6-3.6 2.5 0 4.6 1.6 4.6 3.6 0 .3 0 .6-.1.9.5.3.9.8.9 1.4z" />
+                  <circle cx="9.5" cy="11.5" r=".5" />
+                  <circle cx="14.5" cy="11.5" r=".5" />
+                  <path d="M15 15.5c-.7 1-1.8 1.5-3 1.5s-2.3-.5-3-1.5" />
+                  <path d="M12 7c1.3 0 2.5.4 3.4 1.1l1.1-1.1" />
+                </svg>
               </a>
             </div>
           </div>
@@ -102,9 +124,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
                 <a 
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info.metaforgeai@gmail.com" 
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:info.metaforgeai@gmail.com" 
                   className="text-secondary hover:text-primary transition-colors duration-300"
                 >
                   info.metaforgeai@gmail.com

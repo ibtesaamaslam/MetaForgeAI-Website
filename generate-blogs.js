@@ -330,10 +330,10 @@ const finalPosts = basePosts.map(post => ({
   content: generateContent(post)
 }));
 
-const fileContent = \`import { TrendingUp, Zap, Brain, Users, Shield, Globe, BarChart, Cpu, Network, Lightbulb } from 'lucide-react';
+const fileContent = `import { TrendingUp, Zap, Brain, Users, Shield, Globe, BarChart, Cpu, Network, Lightbulb } from 'lucide-react';
 
-export const blogPosts = \${JSON.stringify(finalPosts, null, 2).replace(/"(TrendingUp|Zap|Brain|Users|Shield|Globe|BarChart|Cpu|Network|Lightbulb)"/g, '$1')};
-\`;
+export const blogPosts = ${JSON.stringify(finalPosts, null, 2).replace(/"(TrendingUp|Zap|Brain|Users|Shield|Globe|BarChart|Cpu|Network|Lightbulb)"/g, '$1')};
+`;
 
 fs.writeFileSync('./src/data/blogPosts.ts', fileContent);
 console.log('Blog posts generated successfully.');

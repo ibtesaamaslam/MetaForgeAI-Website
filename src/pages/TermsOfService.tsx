@@ -1,4 +1,5 @@
 import Navigation from "../components/Navigation";
+import SEO from "../components/SEO";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
 import { ArrowLeft, FileText } from "lucide-react";
@@ -11,6 +12,11 @@ const TermsOfService = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      <SEO 
+        title="Terms of Service"
+        description="Review the terms of service for using MetaForgeAI's website and enterprise AI services."
+        canonical="https://metaforgeai.com/terms-of-service"
+      />
       {/* Background Effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-50 pointer-events-none"></div>
       
