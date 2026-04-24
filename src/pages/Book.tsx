@@ -18,11 +18,19 @@ const Book = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!formData.name || !formData.email || !formData.message) {
+      toast.error("Please fill in all fields.");
+      return;
+    }
+
     const subject = encodeURIComponent("Consultation Request");
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.open(`mailto:info.metaforgeai@gmail.com?subject=${subject}&body=${body}`, '_top');
     
-    toast.success("Your request has been sent successfully!");
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=info.metaforgeai@gmail.com&su=${subject}&body=${body}`;
+    window.open(gmailLink, '_blank');
+    
+    toast.success("Opening Gmail to send your request...");
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -96,6 +104,7 @@ const Book = () => {
                           onChange={(e) => setFormData({...formData, name: e.target.value})}
                           placeholder="John Doe" 
                           className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-primary/50 transition-colors"
+                          required
                         />
                       </div>
                       <div className="space-y-2">
@@ -108,6 +117,7 @@ const Book = () => {
                           onChange={(e) => setFormData({...formData, email: e.target.value})}
                           placeholder="john@example.com" 
                           className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-primary/50 transition-colors"
+                          required
                         />
                       </div>
                     </div>
@@ -122,6 +132,7 @@ const Book = () => {
                         onChange={(e) => setFormData({...formData, message: e.target.value})}
                         placeholder="Tell us a bit about your project or business needs..." 
                         className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-primary/50 transition-colors resize-none"
+                        required
                       ></textarea>
                     </div>
 

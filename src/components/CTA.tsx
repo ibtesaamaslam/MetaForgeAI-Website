@@ -1,12 +1,6 @@
 import { ArrowRight, Calendar } from 'lucide-react';
 
 const CTA = () => {
-  const handleBookCall = () => {
-    const subject = encodeURIComponent("Consultation Request");
-    const body = encodeURIComponent("Name: \n\nMessage: ");
-    window.open(`mailto:info.metaforgeai@gmail.com?subject=${subject}&body=${body}`, '_top');
-  };
-
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background Effects */}
@@ -26,14 +20,16 @@ const CTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button 
-              onClick={handleBookCall}
+            <a 
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=info.metaforgeai@gmail.com&su=Consultation%20Request&body=Name%3A%20%0A%0AMessage%3A%20"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary inline-flex items-center gap-3 text-lg px-10 py-5"
             >
               <Calendar className="w-6 h-6" />
               Book a 15-min Call
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </a>
             
             <div className="text-secondary text-sm">
               <p>Free consultation • No commitment required</p>

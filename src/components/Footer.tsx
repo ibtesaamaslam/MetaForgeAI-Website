@@ -102,7 +102,9 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
                 <a 
-                  href="mailto:info.metaforgeai@gmail.com" 
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info.metaforgeai@gmail.com" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-secondary hover:text-primary transition-colors duration-300"
                 >
                   info.metaforgeai@gmail.com
