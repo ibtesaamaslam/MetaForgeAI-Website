@@ -23,6 +23,7 @@ const SEO = ({
     <Helmet>
       {/* Standard metadata tags */}
       <title>{siteTitle}</title>
+      <meta name="google-site-verification" content="KAExMB8yD6vpHE_-eMJfkPFwrrRqKHQJkdMmavpH4IE" />
       <meta name="description" content={description} />
       <link rel="canonical" href={canonical} />
 
