@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://metaforgeai.com/sitemap.xml
+Sitemap: https://metaforgeai.vercel.app/sitemap.xml

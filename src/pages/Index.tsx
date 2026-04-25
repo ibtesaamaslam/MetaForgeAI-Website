@@ -32,7 +32,7 @@ const Index = () => {
       <SEO 
         title="MetaForgeAI | Enterprise AI Solutions & Automation"
         description="Transform your enterprise with MetaForgeAI. We specialize in custom AI solution development, intelligent automation, and predictive analytics."
-        canonical="https://metaforgeai.com"
+        canonical="https://metaforgeai.vercel.app"
       />
       <Navigation />
       <Hero />

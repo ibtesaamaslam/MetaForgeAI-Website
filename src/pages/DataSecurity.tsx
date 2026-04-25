@@ -15,7 +15,7 @@ const DataSecurity = () => {
       <SEO 
         title="Data Security"
         description="Learn about MetaForgeAI's enterprise-grade data security measures and how we protect your proprietary business information."
-        canonical="https://metaforgeai.com/data-security"
+        canonical="https://metaforgeai.vercel.app/data-security"
       />
       {/* Background Effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-50 pointer-events-none"></div>

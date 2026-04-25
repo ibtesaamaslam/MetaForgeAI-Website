@@ -12,9 +12,9 @@ interface SEOProps {
 const SEO = ({
   title = "MetaForgeAI | Enterprise AI Solutions & Automation",
   description = "MetaForgeAI provides cutting-edge enterprise AI solutions, intelligent process automation, and predictive analytics to transform your business operations in 2026.",
-  canonical = "https://metaforgeai.com",
+  canonical = "https://metaforgeai.vercel.app",
   ogType = "website",
-  ogImage = "https://metaforgeai.com/og-image.png",
+  ogImage = "https://metaforgeai.vercel.app/og-image.png",
   twitterHandle = "@metaforgeai",
 }: SEOProps) => {
   const siteTitle = title.includes("MetaForgeAI") ? title : `${title} | MetaForgeAI`;
@@ -47,8 +47,8 @@ const SEO = ({
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "MetaForgeAI",
-          "url": "https://metaforgeai.com",
-          "logo": "https://metaforgeai.com/logo.png",
+          "url": "https://metaforgeai.vercel.app",
+          "logo": "https://metaforgeai.vercel.app/logo.png",
           "sameAs": [
             "https://twitter.com/metaforgeai",
             "https://linkedin.com/company/metaforgeai"

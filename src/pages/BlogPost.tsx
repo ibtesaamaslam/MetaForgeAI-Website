@@ -34,7 +34,7 @@ const BlogPost = () => {
       <SEO 
         title={post.title}
         description={post.excerpt}
-        canonical={`https://metaforgeai.com/blog/${post.slug}`}
+        canonical={`https://metaforgeai.vercel.app/blog/${post.slug}`}
         ogType="article"
         ogImage={post.image}
       />

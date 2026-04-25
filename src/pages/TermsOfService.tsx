@@ -15,7 +15,7 @@ const TermsOfService = () => {
       <SEO 
         title="Terms of Service"
         description="Review the terms of service for using MetaForgeAI's website and enterprise AI services."
-        canonical="https://metaforgeai.com/terms-of-service"
+        canonical="https://metaforgeai.vercel.app/terms-of-service"
       />
       {/* Background Effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-50 pointer-events-none"></div>

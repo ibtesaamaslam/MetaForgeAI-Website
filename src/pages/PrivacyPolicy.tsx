@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
       <SEO 
         title="Privacy Policy"
         description="Review MetaForgeAI's privacy policy to understand how we collect, use, and protect your data."
-        canonical="https://metaforgeai.com/privacy-policy"
+        canonical="https://metaforgeai.vercel.app/privacy-policy"
       />
       {/* Background Effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-50 pointer-events-none"></div>

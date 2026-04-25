@@ -40,7 +40,7 @@ const Book = () => {
       <SEO 
         title="Schedule a Consultation"
         description="Book a free 15-minute discovery call to discuss how MetaForgeAI can transform your business with intelligent solutions."
-        canonical="https://metaforgeai.com/book"
+        canonical="https://metaforgeai.vercel.app/book"
       />
       {/* Background Effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-50 pointer-events-none"></div>
