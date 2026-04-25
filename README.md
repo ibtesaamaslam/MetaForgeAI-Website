@@ -66,7 +66,6 @@ The project integrates **Google Gemini AI** for automated blog content generatio
 |-------------|-----|
 | Production (Vercel) | [metaforgeai-agency.vercel.app](https://metaforgeai-agency.vercel.app) |
 | Repository | Private — access granted by owner only |
-| Lovable Project | [lovable.dev/projects/84a95da8](https://lovable.dev/projects/84a95da8-48d4-4104-b637-140e2a14c68c) |
 
 ---
 
