@@ -1,3 +1,7 @@
+
+<img width="1024" height="682" alt="image" src="https://github.com/user-attachments/assets/c3a54ef7-e1f5-48c0-bddd-c3dc12e7fb0e" />
+<br/>
+
 <div align="center">
 
 <img src="https://img.shields.io/badge/TypeScript-91.7%25-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
@@ -9,7 +13,7 @@
 <img src="https://img.shields.io/badge/Visibility-Private%20Repository-red?style=for-the-badge&logo=github&logoColor=white"/>
 <img src="https://img.shields.io/badge/License-Proprietary-FF0000?style=for-the-badge"/>
 
-<br/><br/>
+<br/>
 
 # ⚡ MetaForgeAI Agency
 ### *AI Agency Website · React 18 · TypeScript · shadcn/ui · Gemini AI · Vercel*
